@@ -5,13 +5,13 @@
     String username = (String) session.getAttribute("username");
 
     if (username == null) {
-        response.sendRedirect("login.html");
+        response.sendRedirect("Welcome.jsp");
         return;
     }
 
-    String dbUrl = "jdbc:mysql://localhost:3306/noticeboard";
+    String dbUrl = "jdbc:mysql://localhost:3306/sms";
     String dbUser = "root";
-    String dbPassword = "";
+    String dbPassword = "root";
     Connection conn = null;
     PreparedStatement pstmt = null;
     String noticeName = request.getParameter("nname");
@@ -92,7 +92,7 @@
         <i class="fas fa-bars" id="sidebar_btn"></i>
       </label>
       <div class="left_area">
-        <h3>Society<span>HUB</span></h3>
+        <h3>Society<span>NEXAS</span></h3>
       </div>
       <div class="right_area">
         <a href="logout.jsp" class="logout_btn">Logout</a>
@@ -100,14 +100,14 @@
     </header>
     <div class="sidebar">
       <center>
-        <img src="Images/download.png" class="profile_image" alt="">
+        <img src="./Images/download.png" class="profile_image" alt="">
         <h4> Admin </h4>
       </center>
       <a href="managemem.jsp"><i class="fas fa-desktop"></i><span>Manage Members</span></a>
       <a href="addnotice.jsp" class="active"><i class="fas fa-bullhorn"></i><span>Add Notice</span></a>
       <a href="viewcomplaints.jsp"><i class="fas fa-envelope-open-text"></i><span>View Complaints</span></a>
       <a href="viewpayment.jsp"><i class="fas fa-file-invoice-dollar"></i><span>View Payments</span></a>
-      <a href="photo.jsp"><i class="fas fa-camera-retro"></i><span>Photo Gallery</span></a>
+      <a href="picadd.jsp"><i class="fas fa-camera-retro"></i><span>Photo Gallery</span></a>
     </div>
     
     <div class="content"><br><br><br>
@@ -131,7 +131,7 @@
     if ("POST".equalsIgnoreCase(request.getMethod()) && request.getParameter("send_notice") != null) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sms","root","root");
             String sql = "INSERT INTO notices (NoticeName, NoticeType, NoticeDate, NoticeMessage) VALUES (?, ?, ?, ?)";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, noticeName);

@@ -1,30 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.*" %>
-
-<%
-    // Check if the form has been submitted
-    if ("POST".equalsIgnoreCase(request.getMethod())) {
-        String user = request.getParameter("username");
-        String adcode = request.getParameter("admincode");
-
-        // Validate the username and admin code
-        if ("Admin".equals(user) && "100".equals(adcode)) {
-%>
-            <script>
-                alert('Welcome, You are logged in...!');
-                window.location.href = 'managemem.jsp'; // Redirect to the management page
-            </script>
-<%
-        } else {
-%>
-            <script>
-                alert('Sorry, Please enter valid details.!!');
-            </script>
-<%
-        }
-    }
-%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,7 +100,7 @@
 <body>
 <div class="page">
     <div class="navbar">
-        <img src="./Images/shlogo.jpg" class="logo" alt="Logo">
+        <img src="Images/shlogo.jpg" class="logo" alt="Logo">
         <h1>Society<span style="font-family: 'Merienda', cursive; color:rgb(20, 76, 80);">NEXAS</span></h1>
         <nav>
             <ul>
@@ -146,7 +119,7 @@
                 <div class="adminfbtn">
                     <h1>Admin Login</h1>
                 </div>
-                <img src="./Images/adminlogin.jpg" class="admimg" alt="Admin Login Image">
+                <img src="Images/adminlogin.jpg" class="admimg" alt="Admin Login Image">
                 <form action="Adminlogin.jsp" method="POST">
                     <input type="text" placeholder="Username" name="username" required>
                     <input type="password" placeholder="Admin Code" name="admincode" required>

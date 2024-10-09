@@ -75,11 +75,11 @@
             <img src="Images/download.png" class="profile_image" alt="">
             <h4> Admin </h4>
         </center>
-        <a href="manageMembers.jsp"><i class="fas fa-desktop"></i><span>Manage Members</span></a>
-        <a href="addNotice.jsp"><i class="fas fa-bullhorn"></i><span>Add Notice</span></a>
-        <a href="viewComplaints.jsp" class="active"><i class="fas fa-envelope-open-text"></i><span>View Complaints</span></a>
-        <a href="viewPayments.jsp"><i class="fas fa-file-invoice-dollar"></i><span>View Payments</span></a>
-        <a href="photoGallery.jsp"><i class="fas fa-camera-retro"></i><span>Photo Gallery</span></a>
+        <a href="managemem.jsp"><i class="fas fa-desktop"></i><span>Manage Members</span></a>
+        <a href="addnotice.jsp"><i class="fas fa-bullhorn"></i><span>Add Notice</span></a>
+        <a href="viewcomplaints.jsp" class="active"><i class="fas fa-envelope-open-text"></i><span>View Complaints</span></a>
+        <a href="viewpayment.jsp"><i class="fas fa-file-invoice-dollar"></i><span>View Payments</span></a>
+        <a href="picadd.jsp"><i class="fas fa-camera-retro"></i><span>Photo Gallery</span></a>
     </div>
     <!--sidebar end-->
 

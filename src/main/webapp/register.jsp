@@ -15,8 +15,6 @@
     long mob = 0;
     String pass = request.getParameter("t5");
     int fammem = 0;
-
-    // Try to parse flat number, mobile number, and family members
     try {
         flatno = Integer.parseInt(request.getParameter("t3"));
         mob = Long.parseLong(request.getParameter("t4"));
@@ -352,7 +350,7 @@
 <body>
     <div class="page">
         <div class="navbar">
-            <img src="" class="logo">
+            <img src="./Images/shlogo.jpg" class="logo">
             <h1>Society<span style="font-family: 'Merienda', cursive; color:rgb(20, 76, 80);">Nexus</span></h1>
             <nav>
                 <ul>
@@ -364,7 +362,7 @@
         </div>
         <div class="row">
             <div class="col-1">
-                <img src="Images/building1.jpg">
+                <img src="./Images/building1.jpg" alt="building">
             </div>
             <div class="col-2">
                 <div class="form-container">

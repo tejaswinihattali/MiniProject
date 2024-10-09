@@ -78,7 +78,7 @@
 <!--sidebar start-->
 <div class="sidebar">
     <center>
-        <img src="Images/download.png" class="profile_image" alt="">
+        <img src="./Images/download.png" class="profile_image" alt="">
         <h4><%= loggedInUser %></h4>
     </center>
     <a href="Welcome.jsp"><i class="fas fa-desktop"></i><span>Dashboard</span></a>

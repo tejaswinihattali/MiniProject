@@ -65,7 +65,7 @@
     <!--sidebar start-->
     <div class="sidebar">
       <center>
-        <img src="Images/download.png" class="profile_image" alt="">
+        <img src="./Images/download.png" class="profile_image" alt="">
         <h4> Admin </h4>
       </center>
       <a href="managemem.jsp"><i class="fas fa-desktop"></i><span>Manage Members</span></a>
